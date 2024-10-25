@@ -1,0 +1,94 @@
+html{
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    background-color:rgb(20, 20, 20);
+    text-align: center;
+    margin-bottom: 1%;
+}
+header h1{
+    display: inline-block;
+    color: greenyellow;
+    font-size: 50px;
+    border-radius: 20px;
+}
+header nav.menu{
+    margin: 0% 10% 0.5% 10%;
+    display:flex;
+    justify-content: space-between;
+    align-items:baseline;
+    color: greenyellow;
+}
+
+a.menu{
+    text-decoration: none;
+    transition: 0.05s;
+    font-size: large;
+    color:greenyellow;
+}
+a.menu:hover{
+    text-decoration: none;
+    transform:scale();
+    padding: 6px;
+    border-radius: 20px;
+    background-color: greenyellow;
+    color: green;
+}
+
+hr.separador{
+    border: 1px solid rgb(104, 0, 196);
+}
+
+body{
+    background-color:rgb(20, 20, 20);
+    min-width: 900px;
+    min-height: 200px;
+}
+div.home{
+    width: 70%;
+    padding: 0.5%;
+    float: left;
+    text-align: left;
+    border: rgba(132, 0, 255, 0.328) solid 3px;
+    border-radius: 20px;
+    margin: 5px 10px 5px 10px;
+}
+div.home h2, h3{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(104, 0, 196);
+}
+div.home p{
+    font-size: x-large;
+    color: greenyellow;
+}
+div.destaque{
+    width: 25%;
+    padding: 0.5%;
+    float: right;
+    text-align: left;
+    border: rgb(132, 0, 255, 0.328) solid 3px;
+    border-radius: 20px;
+    margin: 5px 10px 5px 10px;
+}
+div.destaque h2, h3{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(104, 0, 196);
+}
+div.destaque p{
+    text-align: left;
+    display: block;
+    color: greenyellow;
+}
+footer{ 
+    background-color:rgb(27, 27, 27);
+    width: 100%;
+    min-height: 200px;
+    color: greenyellow;
+    padding: 1% 0% 1% 0%;
+    clear: both;
+}
