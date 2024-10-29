@@ -35,7 +35,7 @@ a.menu:hover{
     padding: 6px;
     border-radius: 20px;
     background-color: greenyellow;
-    color: green;
+    color: rgb(118, 30, 195);
 }
 
 hr.separador{
@@ -91,4 +91,49 @@ footer{
     color: greenyellow;
     padding: 1% 0% 1% 0%;
     clear: both;
+}
+
+.contato{
+    display: flex;
+    float: left;
+    width: 10%;
+    height: auto;
+    border-color: rgb(104, 0, 196);
+    border-radius: 10px;
+}
+.legend{
+    color: rgb(144, 189, 144);
+}
+
+li{
+    list-style: none;
+    color: greenyellow;
+}
+
+fieldset label{
+    color: greenyellow;
+    padding-right: 10px;
+    float: inline-start;
+}
+fieldset input , textarea{
+    border: 1px solid rgb(104, 0, 196);
+    border-radius: 5px;
+    background-color: rgb(20, 20, 20);
+    color: greenyellow;
+    padding: 5px;
+}
+fieldset input:hover, textarea:hover{
+    background-color: rgb(104, 0, 196);
+    color: greenyellow;
+}
+
+form button{
+    background-color: rgb(104, 0, 196);
+    color: greenyellow;
+    border-radius: 5px;
+    padding: 5px;
+}
+form button:hover{
+    background-color: greenyellow;
+    color: rgb(104, 0, 196);
 }
