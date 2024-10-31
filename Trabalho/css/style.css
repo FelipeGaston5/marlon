@@ -15,6 +15,38 @@ header h1{
     font-size: 50px;
     border-radius: 20px;
 }
+
+.carrosel-cont{
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.carrosel-slide{
+    display: flex;
+}
+.carrosel-img{
+    min-width: 100%;
+    transition: 0.5s ease;
+    color: greenyellow;
+}
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    background-color: rgb(0, 0, 0, 0.5s);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
+
 header nav.menu{
     margin: 0% 10% 0.5% 10%;
     display:flex;
