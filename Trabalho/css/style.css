@@ -48,9 +48,8 @@ header h1{
 }
 
 header nav.menu{
-    margin: 0% 10% 0.5% 10%;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items:baseline;
     color: greenyellow;
 }
@@ -65,7 +64,7 @@ a.menu:hover{
     text-decoration: none;
     transform:scale();
     padding: 6px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: greenyellow;
     color: rgb(118, 30, 195);
 }

@@ -1,12 +1,12 @@
-let index = 0;
+let galeria = 0;
 const slides =document.querySelectorAll('.carrosel-img');
 
 function showSlide(i){
-    index += i;
-    if(index>= slides.length) index =0;
-    if(index < 0) index = slides.length -1;
+    galeria += i;
+    if(galeria>= slides.length) galeria = 0;
+    if(galeria < 0) galeria = slides.length -1;
 
-    document.querySelector('.carrosel-slide').style.transform = `translateX(${-index * 100}%)`;
+    document.querySelector('.carrosel-slide').style.transform = `translateX(${-galeria * 100}%)`;
 }
 
 function moveslide(i){
