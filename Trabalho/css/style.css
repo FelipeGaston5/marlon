@@ -5,15 +5,15 @@ html{
 }
 
 header{
-    background-color:rgb(20, 20, 20);
+    background-color:linear-gradient(to bottom, #f0f0f0, #007bff);
     text-align: center;
     margin-bottom: 1%;
 }
 header h1{
     display: inline-block;
-    color: greenyellow;
+    color: rgb(0, 0, 0);
     font-size: 50px;
-    border-radius: 20px;
+    font-weight: bold;
 }
 
 .carrosel-cont{
@@ -47,36 +47,44 @@ header h1{
     right: 10px;
 }
 
-header nav.menu{
-    display:flex;
-    justify-content: space-around;
-    align-items:baseline;
-    color: greenyellow;
+nav.menu{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    cursor: default;
 }
 
 a.menu{
     text-decoration: none;
+    margin: 0 15px;
     transition: 0.05s;
-    font-size: large;
-    color:greenyellow;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
 }
+
 a.menu:hover{
     text-decoration: none;
     transform:scale();
-    padding: 6px;
-    border-radius: 10px;
-    background-color: greenyellow;
-    color: rgb(118, 30, 195);
+    color: #007bff;
 }
+
 
 hr.separador{
     border: 1px solid rgb(104, 0, 196);
 }
 
 body{
-    background-color:rgb(20, 20, 20);
-    min-width: 900px;
-    min-height: 200px;
+    background:linear-gradient(to top,  #007bff, #f0f0f0);
+    margin: 0px;
+    padding:0px;
 }
 div.home{
     width: 70% ;
@@ -115,8 +123,8 @@ div.destaque p{
     display: block;
     color: greenyellow;
 }
-footer{ 
-    background-color:rgb(27, 27, 27);
+footer{
+    background:linear-gradient(to margin-bottom, #268fff, #f0f0f0);
     width: 100%;
     min-height: 200px;
     color: greenyellow;

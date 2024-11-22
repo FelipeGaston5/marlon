@@ -20,20 +20,15 @@ document.getElementsByClassName('next')[0].addEventListener('click', () => moves
 
 
 
-let carrossel = 0;
-const cur = documentquerySelectorAll('.curG');
+document.querySelector('.dropdown-btn').addEventListener('click', function () {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
 
-function showCur(c){
-    G += c;
-    if(G >= cur.length) cur = 0;
-    if(G < 0) G = cur.length -1;
-
-    document.querySelector('.cur').style.transform = `translateX(${-G * 100}%)`;
-    
-}
-function moverCur(c){
-    showCur(c);
-}
-
-document.getElementsByClassName('prev')[0].addEventListener('click', () => showCur(-1));
-document.getElementsByClassName('next')[0].addEventListener('click', () => showCur(1));
+// Fechar o menu clicando fora
+window.addEventListener('click', function (e) {
+    if (!e.target.matches('.dropdown-btn')) {
+        const dropdowns = document.querySelector('.dropdown-content');
+        if (dropdowns) dropdowns.style.display = 'none';
+    }
+});

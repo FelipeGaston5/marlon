@@ -13,6 +13,42 @@
             background: linear-gradient(to bottom, #f0f0f0, #007bff);
         }
 
+        nav.menu{
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .menu a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .menu a:hover{
+            color: #007bff;
+        }
+        #floatingMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            transform: translateY(-100%);
+            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            z-index: 1000;
+        }
         /* Estilo do menu flutuante */
         #floatingMenu {
             position: fixed;
@@ -57,6 +93,56 @@
         #floatingMenu a:hover {
             text-decoration: underline;
         }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #45a049;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-content li {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content li a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #f1f1f1;
+        }
+
     </style>
 </head>
 <body>
@@ -67,10 +153,24 @@
         <a href="#section2">Seção 2</a>
         <a href="#section3">Seção 3</a>
     </div>
+    <nav class="menu">
+            <a href="#section1">Seção 1</a>
+            <a href="#section2">Seção 2</a>
+            <a href="#section3">Seção 3</a>
+        </nav>
 
     <!-- Conteúdo principal -->
     <div id="content">
         <h1>Bem-vindo à Página</h1>
+        <div class="dropdown">
+            <button class="dropdown-btn">Menu</button>
+            <ul class="dropdown-content">
+                <li><a href="#option1">Option 1</a></li>
+                <li><a href="#option2">Option 2</a></li>
+                <li><a href="#option3">Option 3</a></li>
+            </ul>
+        </div>
+    
         <p>Role para baixo para testar o comportamento do menu flutuante.</p>
 
         <h2 id="section1" style="margin-top: 100vh;">Seção 1</h2>
@@ -108,6 +208,20 @@
 
             lastScrollY = currentScrollY; // Atualiza o último valor do scroll
         });
+
+        document.querySelector('.dropdown-btn').addEventListener('click', function () {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Fechar o menu clicando fora
+        window.addEventListener('click', function (e) {
+            if (!e.target.matches('.dropdown-btn')) {
+                const dropdowns = document.querySelector('.dropdown-content');
+                if (dropdowns) dropdowns.style.display = 'none';
+            }
+        });
+
     </script>
 
 </body>
