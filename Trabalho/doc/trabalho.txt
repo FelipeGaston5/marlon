@@ -1,0 +1,64 @@
+Projeto de Frontend-Framework/Desenvolvimento Web/Web Coding
+
+Montar 3 telas usando puramente HTML, CSS e Javascript.
+
+    • As telas deverão ter o mesmo cabeçalho e rodapé.
+
+    1. A primeira tela será a tela de apresentação do site, é um site de exposição para o grupo de vocês. 
+Será uma página explicando sobre as pessoas que estão no grupo
+        ◦ narre um pouco sobre cada integrante
+        ◦ exposição de foto de perfil
+        ◦ competências
+        ◦ experiências profissionais
+        ◦ escolaridade
+
+    2. A segunda página será uma galeria de imagens (com cards) que mostrarão algum conteúdo visual e textual de sua preferência (um conjunto de fotos mostrando algum interesse pessoal, jogos, filmes, bandas, etc.
+
+    3. A terceira e última tela será uma tela de cadastro para o usuário que quiser saber mais sobre o grupo e obter algum contato. A tela também deve ter um espaço dedicado para que os usuários deem sua opinião sobre o que pode melhorar no próprio site. (obs, não há obrigação de o usuário conseguir mandar um formulário de verdade, é só visual)
+
+
+HTML - Obrigatório
+As páginas devem estar montadas com tags semânticas: 
+    • header, 
+    • main 
+    • footer 
+    • nav
+    • article 
+    • etc
+
+CSS - Obrigatório
+Propriedades que devem ser usadas: Obrigatório
+    • display flex
+    • justify-content
+    • align-items
+    • transition
+    • hover
+    • transform
+    • background-color ou image
+    • font-family
+    • font-size
+
+JS: Obrigatório
+Todas as 3 telas devem ter, ao menos, 3 manipulações com javascript cada, que podem ser iguais.
+
+Exemplos:
+
+Modo darkmode do site.
+Menu slide.
+Alguma animação por javascript.
+Aumento de fonte do site.
+Controle do DOM para informar ao usuário que o formulário precisa de mais caracteres, etc.
+
+Obrigatório
+Os sites devem ser postados no github, como uma página estática, pelo github.io. Ou então, no vercel.
+
+TODOS os grupos devem apresentar sendo: 3 minutos de exposição do código e mais 3 da página. 
+
+Grupos: 3 a 6 pessoas. 
+Uma pessoa só precisa me enviar o link do github.
+
+Não pode:
+Usar bootstrap, materialize, tail wind e qualquer outro auxiliador de css e javascript
+
+
+
