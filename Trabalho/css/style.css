@@ -176,3 +176,50 @@ form button:hover{
     background-color: greenyellow;
     color: rgb(104, 0, 196);
 }
+
+
+
+#Refhtml{
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menu{
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    background-color: #ffffff;
+    border: 1px solod #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li{
+    margin: 10px 0;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
+#menu ul li a:hover{
+    color: #007bff;
+}
+
+.hidden{
+    display: none;
+}
