@@ -1,3 +1,83 @@
+:root{
+    --cor-fundo: linear-gradient(to top,  #007bff, #f0f0f0);
+    --cor-footer: linear-gradient(to both,  #007bff, #f0f0f0);
+    --cor-texto: black;
+    --cor-destaque: #005fc4;
+    --cor-menu: #ffffff;
+    --cor-botao: #007bff;
+    --cor-botao-hover: #0056b3;
+    --cor-texto-hover: #77b7fb;
+    --cor-trilho: #007bff;
+    --cor-indicador: #007bff;
+    --cor-borda: #224ff3;
+}
+
+.dark{
+    --cor-fundo: linear-gradient(to top,  #003873, #656565);
+    --cor-footer: linear-gradient(to both,  #003873, #656565);
+    --cor-texto: #ffffff;
+    --cor-destaque: #67b0ff;
+    --cor-botao: #67b0ff;
+    --cor-botao-hover: #3582d4;
+    --cor-texto-hover: #b8b8b8;
+    --cor-trilho: #004084;
+    --cor-indicador: #b8b8b8;
+    --cor-borda: #b6d8ff;
+}
+
+.trilho{
+    position: fixed;
+    top: 22px;
+    right: 25px;
+    width: 50px;
+    height: 25px;
+    background-color: var(--cor-trilho);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.indicador {
+    width: 23px;
+    height: 23px;
+    background-color: var(--cor-indicador);
+    border-radius: 50%;
+    transition: 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#button {
+    all: unset;
+    width: 15px;
+    height: 15px;
+    background-color: var(--cor-botao);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+
+body.dark .trilho {
+    background-color: var(--cor-trilho);
+}
+
+body.dark .indicador {
+    transform: translateX(25px);
+    background-color: var(--cor-indicador);
+}
+
+
+
+
 html{
     font-family: "Play", sans-serif;
     font-weight: 400;
@@ -5,15 +85,17 @@ html{
 }
 
 header{
-    background-color:linear-gradient(to bottom, #f0f0f0, #007bff);
     text-align: center;
     margin-bottom: 1%;
 }
 header h1{
     display: inline-block;
-    color: rgb(0, 0, 0);
+    color: var(--cor-destaque);
     font-size: 50px;
     font-weight: bold;
+}
+body.dark footer {
+    background-color: var(--cor-footer);
 }
 
 div.container{
@@ -21,6 +103,8 @@ div.container{
     text-align: center;
     float: right;
 }
+div.container button.flutmenu{
+    background-color: var(--cor-fundo);
     color: white;
     border: none;
     border-radius: 5px;
@@ -29,7 +113,7 @@ div.container{
     transition: background-color 0.3s;
 }
 div.container button.flutmenu:hover{
-    background-color: #544f4f;
+    color: #007bff;
 }
 
 nav.menu{
@@ -63,13 +147,8 @@ a.menu:hover{
     color: #007bff;
 }
 
-
-hr.separador{
-    border: 1px solid #0b0197;
-}
-
 body{
-    background:linear-gradient(to top,  #007bff, #f0f0f0);
+    background:var(--cor-fundo);
     margin: 0px;
     padding:0px;
 }
@@ -88,29 +167,27 @@ div.home h2{
 div.home h2, h3{
     text-align: center;
     font-weight: bold;
-    color: #00529e;
+    color: var(--cor-destaque);
 }
 
 div.home p{
     font-size: x-large;
     text-indent: 20px;
-    color: rgb(0, 0, 0)
+    color: var(--cor-texto);
 }
 div.home div#esq{
     display: flex;
     float:left;
     width: 45%;
     height:300px;
-    /* border: solid 1px black; */
 }
 div.home div#dir{
     display: flex;
     float: left;
-    /* border: solid 1px black; */
 }
 
 div li{
-    color: black;
+    color: var(--cor-texto);
 }
 div.destaque{
     width: 25%;
@@ -124,18 +201,18 @@ div.destaque{
 div.destaque h2, h3{
     text-align: center;
     font-weight: bold;
-    color: #00529e;
+    color: var(--cor-destaque);
 }
 div.destaque p{
     text-align: left;
     display: block;
-    color: black;
+    color: var(--cor-texto);
 }
 footer{
-    background:linear-gradient(to margin-bottom, #268fff, #f0f0f0);
+    background:var(--cor-footer);
     width: 100%;
     min-height: 200px;
-    color: #0e0a83c8;
+    color: var(--cor-texto);
     padding: 1% 0% 1% 0%;
     clear: both;
 }
@@ -153,44 +230,44 @@ footer span.title{
 .contato{
     width: 10%;
     height: auto;
-    border-color: rgb(0, 0, 255);
+    border-color: var(--cor-borda);
     border-radius: 10px;
 }
 .legend{
-    color: rgb(0, 60, 255);
+    color: var(--cor-destaque);
 }
 
 li{
     list-style: none;
-    color: greenyellow;
+    color: var(--cor-texto);
 }
 
 fieldset label{
-    color: rgb(12, 0, 242);
+    color: var(--cor-destaque);
     padding-right: 10px;
     float: inline-start;
 }
 fieldset input , textarea{
-    border: 1px solid rgb(12, 0, 143);
+    border: 1px solid var(--cor-borda);
     border-radius: 5px;
-    background-color: rgba(148, 200, 255, 0.685);
-    color: rgb(7, 0, 64);
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
     padding: 5px;
 }
 fieldset input:hover, textarea:hover{
-    background-color: rgb(0, 59, 196);
-    color: rgb(157, 152, 250);
+    background-color: var(--cor-botao-hover);
+    color:var(--cor-texto);
 }
 
 form button{
-    background-color:  rgba(148, 200, 255, 0.685);
-    color: rgb(7, 0, 64);
+    background-color:  var(--cor-botao);
+    color: var(--cor-texto);
     border-radius: 5px;
     padding: 5px;
 }
 form button:hover{
-    background-color: rgb(0, 59, 196);
-    color: rgb(157, 152, 250);
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-hover);
 }
 
 
@@ -209,9 +286,7 @@ form button:hover{
     top: 50px;
     right: 20px;
     width: 100px;
-    background-color: #ffffff;
-    border: 1px solod #ddd;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-fundo);
     border-radius: 15px;
     opacity: 0;
     visibility: hidden;
@@ -237,15 +312,15 @@ form button:hover{
     display: block;
     transition: 0.5s;
     text-decoration: none;
-    color: #333;
+    color: var(--cor-botao);
 }
 
 #menu ul li a:hover{
     transition: 0.3s;
     text-transform: uppercase;
     font-weight: bolder;
-    background-color: #f0f0f0;
-    color: #000000;
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-hover);
     padding: 5px;
     border-radius: 15px;
 }
