@@ -34,44 +34,6 @@ div.container button.flutmenu:hover{
     background-color: #544f4f;
 }
 
-div.container button#DM{
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-div.container button#DM:hover{
-    transition: 0.3s;
-    text-transform: uppercase;
-    font-weight: bolder;
-    background-color: #f0f0f0;
-    color: #007bff;
-    padding: 5px 14px 5px 15px;
-    border-radius: 15px;
-}
-div.container button#perfil{
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    font-size: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-div.container button#perfil:hover{
-    transition: 0.3s;
-    text-transform: uppercase;
-    font-weight: bolder;
-    background-color: #f0f0f0;
-    color: #007bff;
-    padding: 5px;
-    border-radius: 15px;
-}
-
 nav.menu{
     top: 0;
     left: 0;
