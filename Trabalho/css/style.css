@@ -16,41 +16,28 @@ header h1{
     font-weight: bold;
 }
 
-.carrosel-cont{
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-}
-.carrosel-slide{
+div.container{
     display: flex;
+    text-align: center;
+    float: right;
 }
-.carrosel-img{
-    min-width: 100%;
-    transition: 0.5s ease;
-    color: rgb(0, 0, 0);
-}
-.prev, .next{
-    position: absolute;
-    top: 50%;
-    transform: translatey(-50%);
-    background-color: rgb(0, 0, 0, 0.5s);
     color: white;
-    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-.prev{
-    left: 10px;
-}
-.next{
-    right: 10px;
+div.container button.flutmenu:hover{
+    background-color: #544f4f;
 }
 
 nav.menu{
     top: 0;
     left: 0;
+    margin: 0;
     width: 100%;
+    float: left;
     background-color: black;
     color: white;
     text-align: center;
@@ -78,7 +65,7 @@ a.menu:hover{
 
 
 hr.separador{
-    border: 1px solid rgb(104, 0, 196);
+    border: 1px solid #0b0197;
 }
 
 body{
@@ -148,7 +135,7 @@ footer{
     background:linear-gradient(to margin-bottom, #268fff, #f0f0f0);
     width: 100%;
     min-height: 200px;
-    color: greenyellow;
+    color: #0e0a83c8;
     padding: 1% 0% 1% 0%;
     clear: both;
 }
@@ -164,15 +151,13 @@ footer span.title{
 }
 
 .contato{
-    display: flex;
-    float: left;
     width: 10%;
     height: auto;
-    border-color: rgb(104, 0, 196);
+    border-color: rgb(0, 0, 255);
     border-radius: 10px;
 }
 .legend{
-    color: rgb(144, 189, 144);
+    color: rgb(0, 60, 255);
 }
 
 li{
@@ -181,29 +166,90 @@ li{
 }
 
 fieldset label{
-    color: greenyellow;
+    color: rgb(12, 0, 242);
     padding-right: 10px;
     float: inline-start;
 }
 fieldset input , textarea{
-    border: 1px solid rgb(104, 0, 196);
+    border: 1px solid rgb(12, 0, 143);
     border-radius: 5px;
-    background-color: rgb(20, 20, 20);
-    color: greenyellow;
+    background-color: rgba(148, 200, 255, 0.685);
+    color: rgb(7, 0, 64);
     padding: 5px;
 }
 fieldset input:hover, textarea:hover{
-    background-color: rgb(104, 0, 196);
-    color: greenyellow;
+    background-color: rgb(0, 59, 196);
+    color: rgb(157, 152, 250);
 }
 
 form button{
-    background-color: rgb(104, 0, 196);
-    color: greenyellow;
+    background-color:  rgba(148, 200, 255, 0.685);
+    color: rgb(7, 0, 64);
     border-radius: 5px;
     padding: 5px;
 }
 form button:hover{
-    background-color: greenyellow;
-    color: rgb(104, 0, 196);
+    background-color: rgb(0, 59, 196);
+    color: rgb(157, 152, 250);
+}
+
+
+
+#Refhtml{
+    margin-right: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menu{
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 100px;
+    background-color: #ffffff;
+    border: 1px solod #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#menu.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu ul{
+    transition: 0.5s;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li{
+    transition: 0.5s;
+}
+
+#menu ul li a{
+    display: block;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #333;
+}
+
+#menu ul li a:hover{
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #f0f0f0;
+    color: #000000;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.hidden{
+    display: none;
 }
