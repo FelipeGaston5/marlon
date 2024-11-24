@@ -25,7 +25,16 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const Refhtml = document.getElementById('Refhtml');
     const menu = document.getElementById('menu');
 
-    Refhtml.addEventListener('click', () =>{
+    Refhtml.addEventListener('click', (event) =>{
+        event.stopPropagation();
+        menu.classList.toggle('active');
         menu.classList.toggle('hidden');
+    })
+
+
+    document.addEventListener('click', (event) =>{
+        if(!menu.contains(event.target) && !Refhtml.contains(event.target)){
+            menu.classList.add('hidden');
+        }
     })
 })
