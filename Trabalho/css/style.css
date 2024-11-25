@@ -2,12 +2,13 @@
     --cor-fundo: linear-gradient(to top,  #007bff, #f0f0f0);
     --cor-footer: linear-gradient(to both,  #007bff, #f0f0f0);
     --cor-texto: black;
+    --base-fonte: 16px;
     --cor-destaque: #005fc4;
     --cor-menu: #ffffff;
     --cor-botao: #007bff;
     --cor-botao-hover: #0056b3;
     --cor-texto-hover: #77b7fb;
-    --cor-trilho: #007bff;
+    --cor-trilho: #003c7c;
     --cor-indicador: #007bff;
     --cor-borda: #224ff3;
 }
@@ -26,16 +27,13 @@
 }
 
 .trilho{
-    position: fixed;
-    top: 22px;
-    right: 25px;
+    position: relative;
+    top: 30px;
+    left: -90px;
     width: 50px;
     height: 25px;
     background-color: var(--cor-trilho);
     border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     padding: 2px;
     cursor: pointer;
     z-index: 1000;
@@ -66,6 +64,36 @@
 }
 
 
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button {
+    position: relative;
+    height: 40px;
+    width: 50px;
+    align-items: flex-end; /* Alinha os botões à direita */
+    font-size: 16px; 
+    font-weight: bold; 
+    color: white; 
+    background-color: #007BFF; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; }
+
+button:hover {
+    background-color: #0056b3; /
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+
 body.dark .trilho {
     background-color: var(--cor-trilho);
 }
@@ -75,7 +103,11 @@ body.dark .indicador {
     background-color: var(--cor-indicador);
 }
 
-
+.fonte{
+    text-indent: 30px;
+    float: right;
+    width: 1px;
+}
 
 
 html{
@@ -91,29 +123,21 @@ header{
 header h1{
     display: inline-block;
     color: var(--cor-destaque);
-    font-size: 50px;
+    font-size: 3.125em;
     font-weight: bold;
 }
 body.dark footer {
     background-color: var(--cor-footer);
 }
 
-div.container{
-    display: flex;
-    text-align: center;
-    float: right;
+button#Enviar{
+    width: 75px;
+    height: 25px;
 }
-div.container button.flutmenu{
-    background-color: var(--cor-fundo);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-div.container button.flutmenu:hover{
-    color: #007bff;
+button#Limpar{
+    width: 75px;
+    height: 25px;
+
 }
 
 nav.menu{
@@ -122,7 +146,7 @@ nav.menu{
     margin: 0;
     width: 100%;
     float: left;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.663);
     color: white;
     text-align: center;
     padding: 15px 20px;
@@ -131,6 +155,63 @@ nav.menu{
     z-index: 1000;
     cursor: default;
 }
+
+.menu-toggle {
+    width: 35px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: absolute; 
+    top: 15px;
+    right: 15px; 
+}
+.menu-toggle div {
+    height: 4px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+}
+.menu-toggle.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-dropdown {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        background: #007bff;
+        padding: 5px;
+        border-radius: 5px;
+        width: 350px;
+        height: 80px;
+        z-index: 999;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-dropdown a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.menu-dropdown a:hover {
+    background: #0056b3;
+}
+.menu-dropdown.open {
+    display: flex;
+}
+
 
 a.menu{
     text-decoration: none;
@@ -149,11 +230,12 @@ a.menu:hover{
 
 body{
     background:var(--cor-fundo);
+    font-size: var(--base-fonte);
     margin: 0px;
     padding:0px;
 }
 div.home{
-    width: 69% ;
+    width: 75% ;
     padding: 0.5%;
     float: left;
     text-align: left;
@@ -171,7 +253,7 @@ div.home h2, h3{
 }
 
 div.home p{
-    font-size: x-large;
+    font-size: var(--base-fonte);
     text-indent: 20px;
     color: var(--cor-texto);
 }
@@ -190,7 +272,7 @@ div li{
     color: var(--cor-texto);
 }
 div.destaque{
-    width: 25%;
+    width: 15%;
     padding: 0.5%;
     float: right;
     text-align: left;
@@ -327,4 +409,36 @@ form button:hover{
 
 .hidden{
     display: none;
+}
+
+.carrosel-cont {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.carrosel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carrosel-img {
+    width: 100%;
+    flex-shrink: 0;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   
+    color: var(--cor-botao);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
 }

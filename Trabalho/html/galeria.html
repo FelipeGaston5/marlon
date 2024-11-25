@@ -6,35 +6,71 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-</head><nav class="menu">
-        <a href="contato.html" class="menu">Contato</a><a href="index.html" class="menu">Início</a> galeria
+</head>
+<nav class="menu">
+        <a href="contato.html" class="menu">Contato</a>
+        <a href="index.html" class="menu">Início</a> 
+        galeria
         <div class="container">
-            <button id="Refhtml" class="flutmenu">&#9776;</button>
-            <div class="hidden" id="menu">
-                <ul>
-                    <li><a href="#" id="DM">Menu</a></li>
-                        <li><a href="#" id="perfil">perfil</a></li>
-                    <li>
-                        <div class="trilho">
-                            <div class="indicador">
-                                <button id="button"></button>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="#"></a></li>
-                </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </div>
+            <div class="menu-dropdown" id="menu-dropdown">
+                <!-- <a href="#">Início</a>
+                <a href="#">Galeria</a>
+                <a href="#">Contato</a> -->
+                Modo noturno
+                <div class="trilho">
+                    <div class="indicador">
+                        <button id="button"></button>
+                    </div>
+                </div>
+                <span class="fonte">   Fonte</span>
+                <div class="controles">
+                    <button class="aumentar" id="aumentarfonte">+</button>
+                    <button id="Diminuirfonte" class="diminuir">-</button>
+                </div>
     </nav>
 <header>
     <h1>TITULO</h1>
     
 </header>
 <body>
+    <div class="carrosel-cont">
+        <div class="carrosel-slide">
+            <img src="https://s2-techtudo.glbimg.com/XktvGntzx-lRx5gsqg07JOzl3JQ=/0x0:695x489/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/x/T/ySQQ7NS5SaqTbTAvm6lQ/2014-02-20-minecraft-screen-cover-capa-techtudo-image.jpg" alt="imagem 1" class="carrosel-img">
+            <img src="https://t2.tudocdn.net/606269?w=1920&h=1080" alt="Imagem 2" class="carrosel-img">
+            <img src="#" alt="Imagem 3" class="carrosel-img">
+        </div>
+        <span class="prev" onclick="moveSlide(-1)">&#10094</span>
+        <span class="next" onclick="moveSlide(1)">&#10095</span>
+    </div>
 
 </body>
 <footer>
     Direitos reservados
     <script src="../js/script.js"></script>
 </footer>
+<script>
+      let currentSlide = 0;
+        const slides = document.querySelectorAll('.carrosel-img');
+        const slideContainer = document.querySelector('.carrosel-slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlide = 0;
+            else if (index < 0) currentSlide = slides.length - 1;
+            else currentSlide = index;
+
+            const offset = -currentSlide * 100;
+            slideContainer.style.transform = `translateX(${offset}%)`;
+        }
+
+        function moveSlide(step) {
+            showSlide(currentSlide + step);
+        }
+
+     
+</script>
 </html>
