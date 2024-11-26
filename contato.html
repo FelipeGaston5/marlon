@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .error-mensagem {
+            color: red;
+            font-size: 1.24em; /* Corrigido o formato */
+            margin-top: 5px;
+            display: none;
+        }
+        .success-mensagem {
+            color: green;
+            font-size: 1.2em;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+    <nav class="menu">
+        <img src="/Trabalho/img/Logo Uni.png" alt="Logo" class="Logo">
+        <a class="menu">Contato </a>
+        <a href="index.html" class="menu"> Início </a>  
+        <a href="galeria.html" class="menu"> galeria</a>
+        <div class="container">
+            <div class="menu-toggle" id="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu-dropdown" id="menu-dropdown">
+                <!-- <a href="#">Início</a>
+                <a href="#">Galeria</a>
+                <a href="#">Contato</a> -->
+                Modo noturno
+                <div class="trilho">
+                    <div class="indicador">
+                        <button id="button"></button>
+                    </div>
+                </div>
+                <span class="fonte">   Fonte</span>
+                <div class="controles">
+                    <button class="aumentar" id="aumentarfonte">+</button>
+                    <button id="Diminuirfonte" class="diminuir">-</button>
+                </div>
+    </nav>
+<header>
+    <h1>Contato</h1>
+
+    <fieldset class="contato">
+        <legend class="legend">CONTATO</legend>
+        <form id="contatos">
+            <label for="Nome">Nome: </label>
+            <input type="text" name="Nome" id="Nome">
+            <span class="error-mensagem" id="NomeErrado">O nome deve ter pelo menos 3 caracteres</span>
+            <br><br>
+            
+            <label for="Fone">Celular: </label>
+            <input type="text" name="Fone" id="Fone">
+            <span class="error-mensagem" id="TelefoneErrado">Insira um telefone válido</span>
+            <br><br>
+            
+            <label for="Email">E-mail: </label>
+            <input type="email" name="Email" id="Email">
+            <span class="error-mensagem" id="EmailErrado">Insira um email válido</span>
+            <br><br>
+            
+            <label for="Mensagem">Mensagem (Mínimo 10 caracteres)</label>
+            <textarea name="Mensagem" id="Mensagem" cols="20" rows="5"></textarea>
+            <span class="error-mensagem" id="MensagemErrada">A mensagem deve ter no mínimo 10 caracteres</span>
+            <br><br>
+
+            <button type="submit" id="Enviar" >Enviar</button>
+            <button type="reset"  id="Limpar">Limpar</button>
+        </form>
+        <p class="success-mensagem" id="successMessage">Formulário enviado com sucesso!</p>
+    </fieldset>
+    <br>
+    <footer>
+        Direitos reservados
+    
+        <article>
+            Esse é um trabalho feito para a aula de: <span class="title">desenvolvimento de aplicações para internet</span>
+            .<br> Do curso: <span class="title">análise e desenvolvimento de sistemas</span>
+            (<span class="title">ADS</span>)
+        </article>
+        <article>
+            Feito pelos alunos: 
+            <span class="nome">artur</span> , 
+            <span class="nome">vinicius</span> , 
+            <span class="nome">mateus</span> , 
+            <span class="nome">felipe</span>
+            <br>Professor: <span class="nome">marlon</span>
+        </article>
+    
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const form = document.getElementById('contatos');
+        const nomeInput = document.getElementById('Nome');
+        const telefoneInput = document.getElementById('Fone');
+        const emailInput = document.getElementById('Email');
+        const mensagemInput = document.getElementById('Mensagem');
+
+        const nomeErro = document.getElementById('NomeErrado');
+        const telefoneErro = document.getElementById('TelefoneErrado');
+        const emailErro = document.getElementById('EmailErrado');
+        const mensagemErro = document.getElementById('MensagemErrada');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let isValid = true;
+
+            if (nomeInput.value.trim().length < 3) {
+                nomeErro.style.display = 'block';
+                isValid = false;
+            } else {
+                nomeErro.style.display = 'none';
+            }
+
+            if (telefoneInput.value.trim().length < 9) {
+                telefoneErro.style.display = 'block';
+                isValid = false;
+            } else {
+                telefoneErro.style.display = 'none';
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailErro.style.display = 'block';
+                isValid = false;
+            } else {
+                emailErro.style.display = 'none';
+            }
+
+            if (mensagemInput.value.trim().length < 10) {
+                mensagemErro.style.display = 'block';
+                isValid = false;
+            } else {
+                mensagemErro.style.display = 'none';
+            }
+
+            if (isValid) {
+                successMessage.style.display = 'block';
+                form.reset(); // Reseta o formulário
+            } else {
+                successMessage.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
