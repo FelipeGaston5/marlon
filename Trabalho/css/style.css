@@ -225,7 +225,7 @@ a.menu{
     transition: 0.05s;
     font-size: 25px;
     font-weight: bold;
-    color: var(--cor-texto-menu);
+    color: white;
     
 }
 
@@ -331,7 +331,9 @@ li{
     list-style: none;
     color: var(--cor-texto);
 }
-
+fieldset{
+    width: 100%;
+}
 fieldset label{
     color: var(--cor-destaque);
     padding-right: 10px;
@@ -464,4 +466,53 @@ img.Logo{
     right: 10px;
     font-size: 40px;
     
+}
+
+/* Estilos comuns para os cards */
+.secao4 {
+    margin: 0;
+    color: var(--cor-texto);
+    font-family: Helvetica, sans-serif;
+}
+
+.secao4-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.secao4-div-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3 - 60px);
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: var(--cor-texto-menu);
+    transition: all 0.5s ease;
+}
+
+.secao4-div-card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.secao4-div-card img {
+    width: 70%;
+    height: 65%;
+}
+
+.secao4-div-card h3 {
+    margin-bottom: 0px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .secao4-div-card {
+        width: 100%;
+    }
 }
