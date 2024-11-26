@@ -12,7 +12,7 @@ Será uma página explicando sobre as pessoas que estão no grupo
         ◦ experiências profissionais
         ◦ escolaridade
 
-    2. A segunda página será uma galeria de imagens (com cards) que mostrarão algum conteúdo visual e textual de sua preferência (um conjunto de fotos mostrando algum interesse pessoal, jogos, filmes, bandas, etc.
+    2. A segunda página será uma galeria de imagens (com cards) que mostrarão algum conteúdo visual e textual de sua preferência (um conjunto de fotos mostrando algum interesse pessoal, jogos, filmes, bandas, ec.t
 
     3. A terceira e última tela será uma tela de cadastro para o usuário que quiser saber mais sobre o grupo e obter algum contato. A tela também deve ter um espaço dedicado para que os usuários deem sua opinião sobre o que pode melhorar no próprio site. (obs, não há obrigação de o usuário conseguir mandar um formulário de verdade, é só visual)
 

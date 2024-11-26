@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galeria</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <nav class="menu">
+        <img src="/Trabalho/img/Logo Uni.png" alt="Logo" class="Logo">
         <a href="contato.html" class="menu">Contato</a>
         <a href="index.html" class="menu">Início</a> 
-        galeria
+       <a class= "menu"> galeria</a>
         <div class="container">
             <div class="menu-toggle" id="menu-toggle">
                 <div></div>
@@ -34,15 +35,22 @@
                 </div>
     </nav>
 <header>
-    <h1>TITULO</h1>
+    <h1>Galeria</h1>
     
 </header>
 <body>
     <div class="carrosel-cont">
         <div class="carrosel-slide">
-            <img src="https://s2-techtudo.glbimg.com/XktvGntzx-lRx5gsqg07JOzl3JQ=/0x0:695x489/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/x/T/ySQQ7NS5SaqTbTAvm6lQ/2014-02-20-minecraft-screen-cover-capa-techtudo-image.jpg" alt="imagem 1" class="carrosel-img">
-            <img src="https://t2.tudocdn.net/606269?w=1920&h=1080" alt="Imagem 2" class="carrosel-img">
-            <img src="#" alt="Imagem 3" class="carrosel-img">
+            <img src="/Trabalho/img/mine.jpeg" alt="imagem 1" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/F1.jpeg" alt="Imagem 2" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/F2.jpeg" alt="Imagem 3" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/OSU.Jpeg" alt="Imagem 4" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/Evo.jpg" alt="Imagem 5" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/m1.jpeg" alt="Imagem 6" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/m2.jpeg" alt="Imagem 7" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/m3.jpeg" alt="Imagem 8" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/V1.jpeg" alt="Imagem 9" id="imagemgaleria" class="carrosel-img">
+            <img src="/Trabalho/img/V2.jpeg" alt="Imagem 10" id="imagemgaleria" class="carrosel-img">
         </div>
         <span class="prev" onclick="moveSlide(-1)">&#10094</span>
         <span class="next" onclick="moveSlide(1)">&#10095</span>
@@ -51,8 +59,22 @@
 </body>
 <footer>
     Direitos reservados
-    <script src="../js/script.js"></script>
-</footer>
+
+    <article>
+        Esse é um trabalho feito para a aula de: <span class="title">desenvolvimento de aplicações para internet</span>
+        .<br> Do curso: <span class="title">análise e desenvolvimento de sistemas</span>
+        (<span class="title">ADS</span>)
+    </article>
+    <article>
+        Feito pelos alunos: 
+        <span class="nome">artur</span> , 
+        <span class="nome">vinicius</span> , 
+        <span class="nome">mateus</span> , 
+        <span class="nome">felipe</span>
+        <br>Professor: <span class="nome">marlon</span>
+    </article>
+
+</footer>  <script src="../js/script.js"></script>
 <script>
       let currentSlide = 0;
         const slides = document.querySelectorAll('.carrosel-img');
